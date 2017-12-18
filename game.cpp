@@ -43,4 +43,11 @@ Game::Game()
     QTimer * timer = new QTimer();
     QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
     timer->start(2000);
+
+
+    //play bg music
+    QMediaPlayer * music = new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/sounds/sound.mpeg"));
+    music->play();
+
 }

@@ -12,6 +12,8 @@ public:
     void keyPressEvent(QKeyEvent * event);
 public slots:
     void spawn();
+private:
+
 };
 
 #endif // PLAYER_H

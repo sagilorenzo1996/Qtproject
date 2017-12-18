@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>bullet.mp4</file>
+        <file>sound.mpeg</file>
+    </qresource>
+</RCC>

@@ -3,6 +3,7 @@
 #include <QGraphicsScene>
 #include "player.h"
 #include <QGraphicsView>
+#include <QMediaPlayer>
 #include <QTimer>
 #include "enemy.h"
 #include "score.h"
