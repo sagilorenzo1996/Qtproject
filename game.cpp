@@ -34,6 +34,9 @@ Game::Game()
     //create score
     score = new Score();
     scene->addItem(score);
+    health = new Health();
+    health->setPos(health->x(),health->y()+25);
+    scene->addItem(health);
 
 
     //spawn enemies

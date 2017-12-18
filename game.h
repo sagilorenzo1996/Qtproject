@@ -6,6 +6,7 @@
 #include <QTimer>
 #include "enemy.h"
 #include "score.h"
+#include "health.h"
 
 
 class Game
@@ -16,6 +17,8 @@ public:
     Player * player;
     QGraphicsView * view;
     Score * score;
+    Health * health;
+
 };
 
 #endif // GAME_H
