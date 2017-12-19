@@ -7,7 +7,7 @@ Game::Game()
 
     //create an item to put into the scene
     player = new Player();
-    player->setRect(0,0,100,100);
+    player->setPixmap(QPixmap(":/images/shipthree.png"));
 
     //add the item to the scene
     scene->addItem(player);
@@ -28,8 +28,9 @@ Game::Game()
     //size of view and scene
     view->setFixedSize(800,600);
     scene->setSceneRect(0,0,800,600);
+    scene->setBackgroundBrush(QBrush(QImage(":/images/bg.jpg")));
 
-    player->setPos(view->width()/2,view->height()-player->rect().height());
+    player->setPos(view->width()/2,view->height()-138);
 
     //create score
     score = new Score();

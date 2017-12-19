@@ -8,6 +8,8 @@
 #include "enemy.h"
 #include "score.h"
 #include "health.h"
+#include <QBrush>
+#include <QImage>
 
 
 class Game
