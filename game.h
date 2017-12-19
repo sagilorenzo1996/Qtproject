@@ -1,5 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
+#include <QWidget>
 #include <QGraphicsScene>
 #include "player.h"
 #include <QGraphicsView>
@@ -7,20 +8,18 @@
 #include <QTimer>
 #include "enemy.h"
 #include "score.h"
-#include "health.h"
 #include <QBrush>
 #include <QImage>
 
 
-class Game
+class Game: public QGraphicsView
 {
 public:
-    Game();
+    Game(QWidget * parent = 0);
     QGraphicsScene * scene;
     Player * player;
     QGraphicsView * view;
     Score * score;
-    Health * health;
 
 };
 

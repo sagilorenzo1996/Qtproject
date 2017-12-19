@@ -28,7 +28,6 @@ void Enemy::move()
     //move enemy down
     setPos(x(),y()+5);
     if(pos().y()+50<0){
-        game->health->decrease();
         scene()->removeItem(this);
         delete this;
         qDebug() << "enemy deleted";

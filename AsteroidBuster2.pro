@@ -19,7 +19,7 @@ SOURCES += main.cpp \
     enemy.cpp \
     game.cpp \
     score.cpp \
-    health.cpp
+    menu.cpp
 
 HEADERS  += \
     player.h \
@@ -27,7 +27,7 @@ HEADERS  += \
     enemy.h \
     game.h \
     score.h \
-    health.h
+    menu.h
 
 FORMS    +=
 

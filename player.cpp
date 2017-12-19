@@ -4,6 +4,8 @@
 #include "enemy.h"
 #include <QGraphicsScene>
 #include "bullet.h"
+#include <typeinfo>
+#include <QList>
 
 
 Player::Player()

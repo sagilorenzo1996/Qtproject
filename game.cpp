@@ -1,6 +1,6 @@
 #include "game.h"
 
-Game::Game()
+Game::Game(QWidget *parent)
 {
     //create the scene
     scene = new QGraphicsScene();
@@ -19,27 +19,21 @@ Game::Game()
 
     //add a view
 
-    view = new QGraphicsView(scene);
+    setScene(scene);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
-    view->show();
     //size of view and scene
-    view->setFixedSize(800,600);
+    setFixedSize(800,600);
     scene->setSceneRect(0,0,800,600);
     scene->setBackgroundBrush(QBrush(QImage(":/images/bg.jpg")));
 
-    player->setPos(view->width()/2,view->height()-138);
+    player->setPos(400,450);
 
     //create score
     score = new Score();
+    score->setPos(score->x()+25,score->y());
     scene->addItem(score);
-    health = new Health();
-    health->setPos(health->x(),health->y()+25);
-    scene->addItem(health);
-
-
     //spawn enemies
     QTimer * timer = new QTimer();
     QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
@@ -50,5 +44,7 @@ Game::Game()
     QMediaPlayer * music = new QMediaPlayer();
     music->setMedia(QUrl("qrc:/sounds/sound.mpeg"));
     music->play();
+
+    show();
 
 }
