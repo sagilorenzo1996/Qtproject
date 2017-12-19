@@ -1,6 +1,6 @@
 #include "menu.h"
 
-Menu::Menu()
+Menu::Menu(QGraphicsItem *parent):QGraphicsTextItem(parent)
 {
 
 }

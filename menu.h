@@ -6,7 +6,7 @@
 class Menu:public QGraphicsTextItem
 {
 public:
-    Menu();
+    Menu(QGraphicsItem * parent=0);
 };
 
 #endif // MENU_H
