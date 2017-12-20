@@ -5,7 +5,6 @@ Score::Score(QGraphicsItem *parent):QGraphicsTextItem(parent)
 {
     //score to 0
     score = 0;
-
     //set text
     setPlainText(QString("score: ") + QString::number(score));
     setDefaultTextColor(Qt::white);

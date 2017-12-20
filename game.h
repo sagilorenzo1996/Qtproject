@@ -8,6 +8,7 @@
 #include <QTimer>
 #include "enemy.h"
 #include "score.h"
+#include "menu.h"
 #include <QBrush>
 #include <QImage>
 
