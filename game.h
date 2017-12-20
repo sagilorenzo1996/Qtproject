@@ -11,6 +11,8 @@
 #include "menu.h"
 #include <QBrush>
 #include <QImage>
+#include <QGraphicsTextItem>
+#include <QMouseEvent>
 
 
 class Game: public QGraphicsView
@@ -18,9 +20,12 @@ class Game: public QGraphicsView
 public:
     Game(QWidget * parent = 0);
     QGraphicsScene * scene;
+    QGraphicsScene * newgame;
+    Menu * menu;
     Player * player;
-    QGraphicsView * view;
+    //QGraphicsView * view;
     Score * score;
+
 
 };
 

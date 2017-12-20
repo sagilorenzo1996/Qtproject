@@ -1,9 +1,15 @@
 #include "menu.h"
-#include <QFont>
+#include <QDebug>
 
-Menu::Menu(QGraphicsItem *parent):QGraphicsTextItem(parent)
+Menu::Menu()
 {
-    setPlainText(QString("heeey: "));
-    setDefaultTextColor(Qt::white);
-    setFont(QFont("times",16));
+
+}
+
+void Menu::mousePressEvent(QMouseEvent *event)
+{
+    if(event->button()==Qt::LeftButton){
+        setPos(x()-10,y());
+        qDebug() << "enemy deleted";
+    }
 }
